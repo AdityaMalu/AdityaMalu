@@ -1,3 +1,7 @@
+<!-- GitHub Intro Banner Start -->
+<img width="100%" alt="Github" src="https://raw.githubusercontent.com/onimur/.github/master/.resources/git-header.svg" />
+<!-- GitHub Intro Banner End -->
+
 ### Hi there 👋 I'm Aditya Malu
 
 <!--
