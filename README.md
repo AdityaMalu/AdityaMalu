@@ -1,8 +1,7 @@
 <!-- GitHub Intro Banner Start -->
 <img width="100%" alt="Github" src="https://raw.githubusercontent.com/onimur/.github/master/.resources/git-header.svg" />
 <!-- GitHub Intro Banner End -->
-
-### Hi there 👋 I'm Aditya Malu
+<h1 align="center">Hi 👋, I'm Aditya Malu</h1>
 
 <!--
 **AdityaMalu/AdityaMalu** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
