@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="Aditya Malu: software engineer, game developer, DSA nerd">
+  <style>
+    .bg{fill:#0f1424} .grid{stroke:#1d2642;stroke-width:1}
+    .name{font:700 64px 'Segoe UI',Helvetica,Arial,sans-serif;fill:#e6eaf5}
+    .name tspan{fill:#7d96ff}
+    .tag{font:400 24px 'Segoe UI',Helvetica,Arial,sans-serif;fill:#aeb7d0}
+    .cell{fill:#161d31;stroke:#2a3454;stroke-width:2}
+    .num{font:700 22px Consolas,'Courier New',monospace;fill:#e6eaf5;text-anchor:middle}
+    .lbl{font:700 16px Consolas,'Courier New',monospace;fill:#f5b335;text-anchor:middle}
+    .hit{fill:#f5b335;opacity:0}
+    .cap{font:400 15px Consolas,'Courier New',monospace;fill:#7a84a3}
+    /* binary search for 21 in [1 3 5 8 13 21 34 55]: mid = 3 (8 is too small, so lo = 4), then mid = 5: found */
+    #mid{animation:mid 6s ease-in-out infinite}
+    #lo{animation:lo 6s ease-in-out infinite}
+    #hit{animation:hit 6s ease-in-out infinite}
+    @keyframes mid{0%,30%{transform:translateX(0)}40%,100%{transform:translateX(124px)}}
+    @keyframes lo{0%,30%{transform:translateX(0)}40%,100%{transform:translateX(248px)}}
+    @keyframes hit{0%,48%{opacity:0}56%,92%{opacity:1}100%{opacity:0}}
+    .blink{animation:blink 1.1s steps(1) infinite}
+    @keyframes blink{50%{opacity:0}}
+    @media (prefers-reduced-motion:reduce){#mid,#lo,#hit,.blink{animation:none}}
+  </style>
+  <defs>
+    <pattern id="g" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" class="grid"/></pattern>
+    <linearGradient id="fade" x1="0" x2="1"><stop offset="0" stop-color="#0f1424" stop-opacity=".95"/><stop offset=".55" stop-color="#0f1424" stop-opacity=".6"/><stop offset="1" stop-color="#0f1424" stop-opacity="0"/></linearGradient>
+  </defs>
+  <rect class="bg" width="1200" height="300" rx="18"/>
+  <rect width="1200" height="300" rx="18" fill="url(#g)"/>
+  <rect width="760" height="300" rx="18" fill="url(#fade)"/>
+
+  <text class="name" x="60" y="128">Aditya <tspan>Malu</tspan><tspan class="blink" fill="#f5b335">_</tspan></text>
+  <text class="tag" x="62" y="172">Software engineer · Game developer · DSA nerd</text>
+  <text class="tag" x="62" y="208" style="font-size:20px;fill:#7a84a3">President @GameDevUtopia · Java · C++ · Python · Go</text>
+
+  <g transform="translate(680,104)">
+    <text class="cap" x="0" y="-26">binarySearch(arr, 21)</text>
+    <g>
+      <rect class="cell" x="0"   y="0" width="54" height="54" rx="9"/><text class="num" x="27"  y="35">1</text>
+      <rect class="cell" x="62"  y="0" width="54" height="54" rx="9"/><text class="num" x="89"  y="35">3</text>
+      <rect class="cell" x="124" y="0" width="54" height="54" rx="9"/><text class="num" x="151" y="35">5</text>
+      <rect class="cell" x="186" y="0" width="54" height="54" rx="9"/><text class="num" x="213" y="35">8</text>
+      <rect class="cell" x="248" y="0" width="54" height="54" rx="9"/><text class="num" x="275" y="35">13</text>
+      <rect id="hit" class="hit" x="310" y="0" width="54" height="54" rx="9"/>
+      <rect class="cell" x="310" y="0" width="54" height="54" rx="9" fill-opacity="0"/><text class="num" x="337" y="35">21</text>
+      <rect class="cell" x="372" y="0" width="54" height="54" rx="9"/><text class="num" x="399" y="35">34</text>
+      <rect class="cell" x="434" y="0" width="54" height="54" rx="9"/><text class="num" x="461" y="35">55</text>
+    </g>
+    <g id="lo"><text class="lbl" x="27" y="82" fill="#7d96ff" style="fill:#7d96ff">lo</text></g>
+    <g id="mid"><path d="M213 92l-7 10h14z" fill="#f5b335"/><text class="lbl" x="213" y="122">mid</text></g>
+    <text class="lbl" x="461" y="82" style="fill:#7d96ff">hi</text>
+  </g>
+</svg>
